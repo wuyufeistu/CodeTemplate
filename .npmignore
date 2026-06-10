@@ -1,0 +1,6 @@
+src/
+node_modules/
+.codetemplate/
+.planning/
+tsconfig.json
+.gitignore

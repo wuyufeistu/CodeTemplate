@@ -1,0 +1,39 @@
+{
+  "name": "codetemplate-mcp",
+  "version": "1.0.10",
+  "description": "Code Pattern Knowledge Base - 代码规范知识库，为 AI agent 提供项目代码模板、组件用法和命名约定查询",
+  "main": "dist/cli/main.js",
+  "bin": {
+    "codetemplate": "./bin/codeTemplate.js"
+  },
+  "scripts": {
+    "build": "esbuild src/cli/main.ts --bundle --platform=node --target=node18 --outfile=dist/cli/main.js --external:better-sqlite3 --format=cjs",
+    "start": "node bin/codeTemplate.js",
+    "dev": "tsx src/cli/main.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "code-template",
+    "ai",
+    "claude-code",
+    "code-generation"
+  ],
+  "author": "Ryan Wu <yfwu6767@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "better-sqlite3": "^11.0.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.0",
+    "@types/node": "^22.0.0",
+    "esbuild": "^0.28.0",
+    "tsx": "^4.22.4",
+    "typescript": "^5.5.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
